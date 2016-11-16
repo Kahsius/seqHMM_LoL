@@ -58,7 +58,7 @@ save_results <- function(name, test = F){
            "hmm.per.team",
            "segments_probas",
            "TMAX",
-           file="name")         
+           file=name)         
     }
   }
 }

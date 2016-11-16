@@ -1,4 +1,4 @@
-setwd("~/Dropbox/Thèse/R/") # Xubuntu
+setwd("~/Dropbox/Thèse/seqHMM_LoL/") # Xubuntu
 # setwd("../Dropbox/Thèse/R/") # Windows
 library("seqHMM")
 library("rjson")
@@ -47,14 +47,14 @@ l_max <- max(apply(matrice.global[[1]], 1, function(row){
 }))
 
 N_STATES <- 40
-N_STATES2 <- 40
-N_CLUSTERS_PROBAS <- 10
+N_STATES2 <- 60
+# N_CLUSTERS_PROBAS <- 10
 N_TEAM <- 2
 N_P_PER_TEAM <- 5
 TMAX <- l_max # <=  la duree minimum d'une partie pour le moment. <- l_max si pas de limitation
 TRIANGLE <- F
 N_THREADS <- 4
-MODE_PER_TEAM <- F
+MODE_PER_TEAM <- T
 SEUIL_REPRESENTATIVITE <- 0.01
 n_matches <- len/N_P_PER_TEAM/N_TEAM
 

@@ -1,5 +1,5 @@
 # ----- Define a function for plotting a matrix ----- #
-myImagePlot <- function(x, ...){
+myImagePlot <- function(x, text=F, ...){
   min <- min(x)
   max <- max(x)
   yLabels <- rownames(x)
@@ -51,9 +51,12 @@ myImagePlot <- function(x, ...){
   if( !is.null(title) ){
     title(main=title)
   }
-  axis(BELOW<-1, at=1:length(xLabels), labels=xLabels, cex.axis=0.7)
-  axis(LEFT <-2, at=1:length(yLabels), labels=yLabels, las= HORIZONTAL<-1,
-       cex.axis=0.7)
+  if(text){
+    axis(BELOW<-1, at=1:length(xLabels), labels=xLabels, cex.axis=0.7)
+    axis(LEFT <-2, at=1:length(yLabels), labels=yLabels, las= HORIZONTAL<-1,
+         cex.axis=0.7)    
+  }
+
   
   # Color Scale
   # par(mar = c(2,1.5,1.5,1))

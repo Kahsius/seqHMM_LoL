@@ -1,4 +1,4 @@
-setwd("~/Dropbox/Thèse/R/") # Xubuntu
+setwd("~/Dropbox/Thèse/seqHMM_LoL//") # Xubuntu
 # setwd("../Dropbox/Thèse/R/") # Windows
 library("seqHMM")
 library("rjson")
